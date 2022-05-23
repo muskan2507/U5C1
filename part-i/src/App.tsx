@@ -2,11 +2,13 @@ import { Nav } from "./components/Nav";
 import { CardDetails } from "./components/CardDetails";
 import { Checkout } from "./components/Checkout";
 import { Body } from "./components/Body";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <Nav />
+     <BrowserRouter>
+     <Nav />
       <Routes>
         <Route path="/" element={<Body />}></Route>
         <Route path="/:id" element={<CardDetails />}>
@@ -14,6 +16,7 @@ function App() {
         </Route>
         <Route path="checkout" element={<Checkout />}></Route>
       </Routes>
+     </BrowserRouter>
     </div>
   );
 }
