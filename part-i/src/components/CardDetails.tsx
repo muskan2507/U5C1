@@ -36,7 +36,7 @@ function CardDetails() {
         
      
           <div className="review">
-          <span className="reviewBy">UserName1234</span>
+          <span className="reviewBy">{}</span>
           <span className="reviewDesc">This product is really good etc....</span>
         </div>
        
