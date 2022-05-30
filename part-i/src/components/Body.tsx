@@ -6,13 +6,15 @@ function Body() {
   const [data,setData]=useState([])
   const get=()=> {
     axios.get("http://localhost:8080/products").then(({data})=>{
-      console.log(data)
+    //  console.log("fetch",data)
       setData(data)
     })
     
   }
   useEffect(()=> {
+    // console.log("prev",data)
     get()
+    // console.log("post",data)
   },[])
   return (
     <div className="container">
